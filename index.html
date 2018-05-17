@@ -10,43 +10,46 @@
   <div class="maincontent">
     <div class="input-group">
       <button id="allCerect" type="submit"></button>
-        <input type="text" class="form-control"></input>
+        <input type="text" class="form-control" placeholder="What needs to be done?"></input>
       <span class="input-group-btn"></span>
     </div>
   <ul class="mainlist">
-    <li>
+    <li class="list">
       <button id="checkbtn"><img src="images/checkicon_02.png" class="checkicon"></button>
-        <div id="list"  class="checked">ああああ</div>
-      <button id="deletebtn"class="deleteicn">×</button>
+        <div id="list">ああああ</div>
+      <input type="button" id="deletebtn" value="×"></input>
     </li>
     <li>
       <button id="checkbtn"></button>
         <div id="list">いいいい</div>
-      <div id="deletebtn"></div>
+        <input type="button" id="deletebtn" value="×"></input>
+
     </li>
     <li>
       <button id="checkbtn"></button>
         <div id="list">うううう</div>
-      <div id="deletebtn"></div>
+      <div id="deletebtn" id="deletebtn" value="×"></div>
     </li>
     <li>
       <button id="checkbtn"></button>
         <div id="list">ええええ</div>
-      <div id="deletebtn"></div>
+      <div id="deletebtn" id="deletebtn" value="×"></div>
     </li>
     <li>
       <button id="checkbtn"></button>
         <div id="list">おおおお</div>
-      <div id="deletebtn"></div>
+      <div id="deletebtn" id="deletebtn" value="×"></div>
     </li>
   </ul>
-  <ul class="btn">
-    <li id="count">items left</li>
-    <li><a href="#" class="serect">All</a></li>
-    <li><a href="#">Active</a></li>
-    <li><a href="#">Completed</a></li>
-    <li><a href="#">Clear completed</a></li>
-  </ul>
+<div class="btn">
+  <div id="count">items left</div>
+    <ul class="subcnt">
+      <li><a href="#" class="serect">All</a></li>
+      <li><a href="#">Active</a></li>
+      <li><a href="#">Completed</a></li>
+    </ul>
+    <div class="clearComp">Clear completed</div>
+</div>
 </div>
 <footer>
   <p>Double-click to edit a todo<br>
