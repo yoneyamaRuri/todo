@@ -135,17 +135,21 @@ footer {
 .deleteicn{
   color: #af5b5e;
 }
-/* .serect{ //All以下3つのボタンをクリックしたときに囲み線を付ける
+ .serect{ /*All以下3つのボタンをクリックしたときに囲み線を付ける */
   border: solid 1px #efd5d6;
-  border-radius: 15%;
+  border-radius: 10%;
   padding: 5px 10px ;
-} */
+}
 .checkicon{
   /* margin: 10px 0; */
   display: block;
   width: 40px;
   height: 40px;
 }
+.hideContent{
+  display: none;
+}
+
  .clearComp{　　　
   display: none; 　/*デフォルト非表示の設定 */
 }
