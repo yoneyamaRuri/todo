@@ -26,8 +26,8 @@
   $("ul").on('click',"li", function() {　
   var indexNom = $("li").index($(this));
   $("img").eq(indexNom).toggle();
-  $(this).toggleClass('checked')
-  $(".task").toggleClass('checkedLine');　　//文字への処理が出来てない
+  $(this).toggleClass('checked');
+  $(this).toggleClass('checkedLine');　　//これが文字にかからないでliにかかってる
 });
 
   $("ul").on('mouseenter', "li", function() {
