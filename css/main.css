@@ -70,6 +70,13 @@ input{
   border-radius: 50%;
   margin-top: 10px;
 }
+.checkbtn img {
+  display:none;
+}
+li.checked .checkbtn img {
+  display:block;
+}
+
 .task{
   display: inline-block;
 }
@@ -87,13 +94,23 @@ input{
   border-bottom: solid 1px #ededed;
 }
 .deletebtn{
+  display: none;
   padding-right: 10px;
   float: right;
   background: none;
-  display:inline-block;
+  /* display:inline-block; */
   color: #cc9a9a;
   font-size: 30px;
 }
+
+li:hover .deletebtn {
+  display:inline-block;
+}
+
+.deletebtn:hover {
+  color: #af5b5e;
+}
+
 .btn{
   /* display:none; デフォルト非表示の設定*/
   margin: auto;
@@ -123,16 +140,21 @@ a{
   color: #777;
   float: right;
 }
+#clearComp:hover {
+  border-bottom: #777 1px solid;
+}
 footer {
   text-align: center;
   margin: 50px;
 
 }
 /* ここから動作のCSS */
-.checkedLine{
+li.checked .task {
   color: #d9d9d9;
   text-decoration: line-through;
 }
+
+
 .deleteicn{
   color: #af5b5e;
 }
