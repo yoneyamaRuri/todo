@@ -1,12 +1,12 @@
 (function(){
 
   /**
-   * taskの追加
+   * taskの追加をする
    */
-  function addNewTask(text) {
+  function addNewTask(inputStr) {
     $("#mainlist").append($('<li class="list"/>')
     .append('<button class="checkbtn"><img src="images/checkicon_02.png" class="checkicon">')
-    .append('<div class="task">' + text + '</div>')
+    .append('<div class="task">' + inputStr + '</div>')
     .append('<input type="button" class="deletebtn" value="×"/>'));
   }
 
@@ -15,22 +15,19 @@
    */
   function setActiveTaskNumText() {
     var classLength = $('.list:not(.checked)').length;
-    $("#count").text(classLength + " items left");
+    $(".count").text(classLength + " items left");
   }
-
 
   // taskリストのul
   var $taskListContainer = $("ul#mainlist");
   // task入力欄
   var $taskInput = $('#input-group input');
 
-
-
   /**
    * 新規登録
    */
-  $taskInput.on('keypress', function(e){ //完璧
-    if(e.which === 13){
+  $taskInput.on('keypress', function(e) {
+    if(e.which === 13) {
       var inputStr = $('.form-control').val();
       $(".form-control").val("");
       addNewTask(inputStr);
@@ -40,7 +37,7 @@
   /**
    * 個別taskチェック・チェック解除
    */
-  $taskListContainer.on('click',"li", function() {
+  $taskListContainer.on('click',"li.list", function() {
     $(this).toggleClass('checked');
   });
 
@@ -50,23 +47,23 @@
   $("#allCerect").on('click', function() {
     var checkedNum = $('.list:not(.checked)').length;
     if (checkedNum === 0) {
-      $('.list').removeClass('checked');
+      $('.list').removeClass('checked'); //全てにcheckedがついているときは、addClassしてcheckedを外す
     } else {
-      $('.list:not(.checked)').addClass('checked');
+      $('.list:not(.checked)').addClass('checked');　//それ以外はcheckedを付ける　※toggleClassをすると、チェックボタンの表示が揃わないので使わない
     }
   });
 
   /**
    * 個別task削除
    */
-  $taskListContainer.on('click','.deletebtn', function(){　//deletebtnをクリックしたらliごと削除されるが、なぜか一番下のimgが表示される　
-    $(this).parent("li").remove();
+  $taskListContainer.on('click','.deletebtn', function() {
+    $(this).parent(".list").remove();
   });
 
   /**
    * チェック済みを一括削除
    */
-  $(".btn").on('click','#clearComp', function(){
+  $("#subcontent").on('click','.clearComp', function() {
     $('.checked').remove();
   });
 
@@ -74,23 +71,23 @@
    * フィルタリング：全表示
    */
   $('.all').on('click', function() {
-    $taskListContainer.find('li').show();
+    $taskListContainer.children('li').show(); //"ul#mainlist"の、子要素のliを表示
   });
 
   /**
    * フィルタリング：未完了のみ表示
    */
   $('.active').on('click', function() {
-    $taskListContainer.find('li').show();
-    $taskListContainer.find('li.checked').hide();
+    $taskListContainer.children('li').show();　
+    $taskListContainer.children('li.checked').hide();　//ただし、checkedのclassがついたliは非表示
   });
 
   /**
-   * フィルタリング：未完了のみ表示
+   * フィルタリング：完了のみ表示
    */
   $('.completed').on('click', function() {
-    $taskListContainer.find('li').show();
-    $taskListContainer.find('li:not(.checked)').hide();
+    $taskListContainer.children('li').show();
+    $taskListContainer.children('li:not(.checked)').hide(); //checkedのclassがついたliは非表示
   });
 
 

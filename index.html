@@ -10,7 +10,7 @@
   <div id="maincontent">
     <div id="input-group">
       <button id="allCerect" type="submit"></button>
-        <input type="text" class="form-control" placeholder="What needs to be done?">
+        <input type="text" class="form-control" placeholder="What needs to be done?" maxlength="19">
       <span class="input-group-btn"></span>
     </div>
   <ul id="mainlist">
@@ -41,14 +41,14 @@
       <input type="button" class="deletebtn" value="×">
     </li>
   </ul>
-<div class="btn">
-  <div id="count">items left</div>
-    <ul class="subcnt">
+<div id="subcontent">
+  <div class="count">items left</div>
+    <ul class="selectgroup">
       <li><a href="#" class="all">All</a></li>
       <li><a href="#" class="active">Active</a></li>
       <li><a href="#" class="completed">Completed</a></li>
     </ul>
-    <button id="clearComp">Clear completed</button>
+    <button class="clearComp">Clear completed</button>
 </div>
 </div>
 <footer>
