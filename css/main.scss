@@ -1,31 +1,32 @@
 @charset "UTF-8";
 
-$main_text_color: #4D4D4D; //色を変数にすることで、目的や用途が視覚化される、変更しやすい
+/*
+*メインカラー
+*/
+$main_text_color: #4D4D4D;
 $off_text_color: #ccc;
+$sub_text_color: #d9d9d9;
+$sub_content_color: #777;
+$main_border: solid 1px #ededed;
+
+/*
+*メインサイズ
+*/
 $main_list_width: 40px;
 $main_list_height: 40px;
-$sub_content_color: #777;
+$main_text_size: 14px;
 
 body {
   background: #F5F5F5;
-  color:$main_text_color;
+  color: $main_text_color;
   margin-right: auto;
   margin-left : auto;
   max-width: 550px;
-  font:14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  min-width: 550px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: $main_text_size;
 }
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  appearance: none;
-}
-.checkicon {
-  width:$main_list_width;
-  height: $main_list_height;
-}
+
 h1 {
   color: #F5E0E0;
   font-size: 80px;
@@ -33,135 +34,143 @@ h1 {
   margin: 0;
   text-align: center;
 }
-ul {
-  display: inline-block;
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
 }
-.subcnt a {
-  text-decoration: none;
-  color:$sub_content_color;
+
+input {
+  color: $main_text_color;
+  font-size: $main_text_size +10px;
+  outline: none;
+  border: none;
+  margin: 15px;
+}
+
+footer {
+  text-align: center;
+  margin: 50px;
 }
 
 #maincontent {
-  border: solid 1px #ededed;
+  border: $main_border;
   background-color: #fff;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
+
 #input-group {
   padding: 10px;
   height: 50px;
-  border-bottom: solid 1px #ededed;
+  border-bottom: $main_border;
 }
+
 #allCerect {
-  border-left: 3px solid #d9d9d9;
-  border-bottom: 3px solid #d9d9d9;
+  border-left: 3px solid $sub_text_color;
+  border-bottom: 3px solid $sub_text_color;
   transform: rotate(-45deg);
   box-sizing: border-box;
   padding: 10px;
   margin: 10px;
   float: left;
 }
-input {
-  color:$main_text_color;
-  font-size: 24px;
-  outline: none;
-  border: none;
-  margin: 15px;
-}
+
 ::placeholder {
-  color: #d9d9d9;
+  color: $sub_text_color;
 }
+
 #mainlist {
   margin: auto;
   padding: 0px;
+    li {
+      padding: 10px;
+      font-size: $main_text_size +10px;
+      height: 50px;
+      width: 550px;
+      list-style: none;
+      border-bottom: $main_border;
+    }
 }
+
 .checkbtn {
-  display:inline;
   width: $main_list_width;
-  height:$main_list_height;
-  border: solid 1px #ededed;
+  height: $main_list_height;
+  border: $main_border;
   border-radius: 50%;
   margin-top: 10px;
+    img {
+     display:none;
+        }
 }
-.checkbtn img {
-  display:none;
+
+.checkicon {
+  width: $main_list_width;
+  height: $main_list_height;
 }
+
 li.checked .checkbtn img {
-  display:block;
+  display: block;
+}
+
+li:hover .deletebtn {
+  display: inline-block;
 }
 
 .task {
   display: inline-block;
 }
-#list{
-  display:inline;
-  width: 460px;
-  padding: 10px;
+
+li.checked .task {
+  color: $sub_text_color;
+  text-decoration: line-through;
 }
-#mainlist li {
-  padding: 10px;
-  font-size: 24px;
-  height: 50px;
-  width: 550px;
-  list-style: none;
-  border-bottom: solid 1px #ededed;
-}
+
 .deletebtn {
   display: none;
   padding-right: 10px;
+  margin: 10px;
   float: right;
   background: none;
   color: #cc9a9a;
   font-size: 30px;
+    &:hover {
+      color: #af5b5e;
+    }
 }
 
-li:hover .deletebtn {
-  display:inline-block;
-}
 
-.deletebtn:hover {
-  color: #af5b5e;
-}
 
 .btn {
-  margin: auto;
   height: 50px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 10px;
+    }
 }
+
+.subcnt {
+    display: inline-block;
+    a {
+      text-decoration: none;
+      color: $sub_content_color;
+   }
+}
+
 #count {
   display: inline-block;
-  color:$sub_content_color;
+  color: $sub_content_color;
   margin: 10px;
-}
-.btn li {
-  list-style: none;
-  display: inline-block;
-  padding: 10px;
 }
 
 #clearComp {
   margin: 15px 10px 10px 10px;
-  display: inline-block;
   color: $sub_content_color;
   float: right;
-}
-#clearComp:hover {
-  border-bottom: $sub_content_color 1px solid;
-}
-footer {
-  text-align: center;
-  margin: 50px;
-}
-
-li.checked .task {
-  color: #d9d9d9;
-  text-decoration: line-through;
-}
-
-
-.deleteicn {
-  color: #af5b5e;
-}
-
-.hideContent {
-  display: none;
+    &:hover {
+      border-bottom: $sub_content_color 1px solid;
+    }
 }
