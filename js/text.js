@@ -5,7 +5,7 @@
    */
   function addNewTask(inputStr) {
     $("#mainlist").append($('<li class="list"/>')
-    .append('<button class="checkbtn"><img src="images/checkicon_02.png" class="checkicon">')
+    .append('<button class="checkbtn"><img src="images/checkicon_02.png" class="checkicon"></button>')
     .append('<div class="task">' + inputStr + '</div>')
     .append('<input type="button" class="deletebtn" value="×"/>'));
   }

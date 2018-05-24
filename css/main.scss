@@ -1,30 +1,22 @@
 @charset "UTF-8";
-
 /*
-*メインカラー
+*カラー
 */
+$main_border_color: solid 1px #ededed;
 $main_text_color: #4D4D4D;
-$off_text_color: #ccc;
-$sub_text_color: #d9d9d9;
-$sub_content_color: #777;
-$main_border: solid 1px #ededed;
-
+$sub_text_color: #777;
 /*
 *メインサイズ
 */
-$main_list_width: 40px;
-$main_list_height: 40px;
-$main_text_size: 14px;
-
 body {
   background: #F5F5F5;
   color: $main_text_color;
   margin-right: auto;
-  margin-left : auto;
+  margin-left: auto;
   max-width: 550px;
   min-width: 550px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: $main_text_size;
+  font-size: 14px;
 }
 
 h1 {
@@ -44,7 +36,7 @@ button {
 
 input {
   color: $main_text_color;
-  font-size: $main_text_size +10px;
+  font-size: 24px;
   outline: none;
   border: none;
   margin: 15px;
@@ -56,7 +48,7 @@ footer {
 }
 
 #maincontent {
-  border: $main_border;
+  border: $main_border_color;
   background-color: #fff;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
@@ -64,12 +56,12 @@ footer {
 #input-group {
   padding: 10px;
   height: 50px;
-  border-bottom: $main_border;
+  border-bottom: $main_border_color;
 }
 
 #allCerect {
-  border-left: 3px solid $sub_text_color;
-  border-bottom: 3px solid $sub_text_color;
+  border-left: 3px solid #d9d9d9;
+  border-bottom: 3px solid #d9d9d9;
   transform: rotate(-45deg);
   box-sizing: border-box;
   padding: 10px;
@@ -78,36 +70,36 @@ footer {
 }
 
 ::placeholder {
-  color: $sub_text_color;
+  color: #d9d9d9;
 }
 
 #mainlist {
   margin: auto;
   padding: 0px;
-    li {
-      padding: 10px;
-      font-size: $main_text_size +10px;
-      height: 50px;
-      width: 550px;
-      list-style: none;
-      border-bottom: $main_border;
-    }
+}
+
+#mainlist li {
+  font-size: 24px;
+  list-style: none;
+  border-bottom: $main_border_color;
 }
 
 .checkbtn {
-  width: $main_list_width;
-  height: $main_list_height;
-  border: $main_border;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  border: $main_border_color;
   border-radius: 50%;
   margin-top: 10px;
-    img {
-     display:none;
-        }
+}
+
+.checkbtn img {
+  display: none;
 }
 
 .checkicon {
-  width: $main_list_width;
-  height: $main_list_height;
+  width: 40px;
+  height: 40px;
 }
 
 li.checked .checkbtn img {
@@ -119,11 +111,14 @@ li:hover .deletebtn {
 }
 
 .task {
+  position: absolute;
+  margin: 15px 0px  0px 10px;
   display: inline-block;
+
 }
 
 li.checked .task {
-  color: $sub_text_color;
+  color: #d9d9d9;
   text-decoration: line-through;
 }
 
@@ -135,40 +130,49 @@ li.checked .task {
   background: none;
   color: #cc9a9a;
   font-size: 30px;
-    &:hover {
-      color: #af5b5e;
-    }
+}
+
+.deletebtn:hover {
+  color: #af5b5e;
 }
 
 #subcontent {
-  height: 50px;
+  padding: 5px;
+  height: 40px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
-    li {
-      list-style: none;
-      display: inline-block;
-      padding: 10px;
-    }
+}
+
+#subcontent li {
+  list-style: none;
+  display: inline-block;
+  //padding: 10px;
 }
 
 .selectgroup {
-    display: inline-block;
-    a {
-      text-decoration: none;
-      color: $sub_content_color;
-   }
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.selectgroup a {
+  text-decoration: none;
+  text-align: center;
+  color: $sub_text_color;
+  margin: 0px 10px;
+
 }
 
 .count {
   display: inline-block;
-  color: $sub_content_color;
-  margin: 10px;
+  color: $sub_text_color;
+  margin: 10px 10px 10px 15px;
 }
 
 .clearComp {
   margin: 15px 10px 10px 10px;
-  color: $sub_content_color;
+  color: $sub_text_color;
   float: right;
-    &:hover {
-      border-bottom: $sub_content_color 1px solid;
-    }
+}
+
+.clearComp:hover {
+  border-bottom: $sub_text_color 1px solid;
 }

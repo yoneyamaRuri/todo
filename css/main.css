@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-*メインカラー
+*カラー
 */
 /*
 *メインサイズ
@@ -76,15 +76,13 @@ footer {
 }
 
 #mainlist li {
-  padding: 10px;
   font-size: 24px;
-  height: 50px;
-  width: 550px;
   list-style: none;
   border-bottom: solid 1px #ededed;
 }
 
 .checkbtn {
+  margin-left: 10px;
   width: 40px;
   height: 40px;
   border: solid 1px #ededed;
@@ -110,6 +108,8 @@ li:hover .deletebtn {
 }
 
 .task {
+  position: absolute;
+  margin: 15px 0px  0px 10px;
   display: inline-block;
 }
 
@@ -133,29 +133,32 @@ li.checked .task {
 }
 
 #subcontent {
-  height: 50px;
+  padding: 5px;
+  height: 40px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
 
 #subcontent li {
   list-style: none;
   display: inline-block;
-  padding: 10px;
 }
 
 .selectgroup {
   display: inline-block;
+  margin-left: 30px;
 }
 
 .selectgroup a {
   text-decoration: none;
+  text-align: center;
   color: #777;
+  margin: 0px 10px;
 }
 
 .count {
   display: inline-block;
   color: #777;
-  margin: 10px;
+  margin: 10px 10px 10px 15px;
 }
 
 .clearComp {
