@@ -37,8 +37,9 @@
   /**
    * 個別taskチェック・チェック解除
    */
-  $taskListContainer.on('click',"li.list", function() {
-    $(this).toggleClass('checked');
+  $taskListContainer.on('click','.checkbtn', function() {
+      var buttonNomber = $('.checkbtn').index(this);
+      $('.list').eq(buttonNomber).toggleClass('checked');
   });
 
   /**
