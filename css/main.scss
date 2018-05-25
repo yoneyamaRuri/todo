@@ -41,6 +41,12 @@ input {
   margin: 15px;
 }
 
+.form-control.more{
+  display: inline-block;
+  margin: auto;
+  background: #F5F5F5;
+}
+
 footer {
   text-align: center;
   margin: 50px;
@@ -156,7 +162,7 @@ li.checked .task {
   text-decoration: none;
   text-align: center;
   color: $sub_text_color;
-  margin: 0px 10px;
+  margin: 0px 5px;
 
 }
 
@@ -174,4 +180,8 @@ li.checked .task {
 
 .clearComp:hover {
   border-bottom: $sub_text_color 1px solid;
+}
+
+.copyright {
+  font-size: 10px;
 }
