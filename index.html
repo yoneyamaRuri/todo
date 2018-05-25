@@ -1,1 +1,64 @@
 <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>todos</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <h1>todos</h1>
+  <div id="maincontent">
+    <div id="input-group">
+      <button id="allCerect" type="submit"></button>
+        <input type="text" class="form-control" placeholder="What needs to be done?" maxlength="19">
+      <span class="input-group-btn"></span>
+    </div>
+  <ul id="mainlist">
+    <!-- <li class="list">
+      <button class="checkbtn"><img src="images/checkicon_02.png" class="checkicon"></button>
+        <div class="task">ああああ</div>
+      <input type="button" class="deletebtn" value="×">
+    </li>
+    <li class="list">
+      <button class="checkbtn"><img src="images/checkicon_02.png" class="checkicon"></button>
+        <div class="task">いいいい</div>
+        <input type="button" class="deletebtn" value="×">
+
+    </li>
+    <li class="list">
+      <button class="checkbtn"><img src="images/checkicon_02.png" class="checkicon"></button>
+        <div class="task">うううう</div>
+      <input type="button" class="deletebtn" value="×">
+    </li>
+    <li class="list">
+      <button class="checkbtn"><img src="images/checkicon_02.png" class="checkicon"></button>
+        <div class="task">ええええ</div>
+      <input type="button" class="deletebtn" value="×">
+    </li>
+    <li class="list">
+      <button class="checkbtn"><img src="images/checkicon_02.png" class="checkicon"></button>
+        <div class="task">おおおお</div>
+      <input type="button" class="deletebtn" value="×">
+    </li> -->
+  </ul>
+<div id="subcontent">
+  <div class="count">items left</div>
+    <ul class="selectgroup">
+      <li><a href="#" class="all">All</a></li>
+      <li><a href="#" class="active">Active</a></li>
+      <li><a href="#" class="completed">Completed</a></li>
+    </ul>
+    <button class="clearComp">Clear completed</button>
+</div>
+</div>
+<footer>
+  <p class="copyright">Double-click to edit a todo<br>
+    Created by Sindre Sorhus<br>
+    Part of TodoMVC</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/text.js"></script>
+
+</body>
+</html>

@@ -2,9 +2,14 @@
 /*
 *カラー
 */
+$main_border_color: solid 1px #ededed;
+$main_text_color: #4D4D4D;
+$sub_text_color: #777;
+
+
 body {
   background: #F5F5F5;
-  color: #4D4D4D;
+  color: $main_text_color;
   margin-right: auto;
   margin-left: auto;
   max-width: 550px;
@@ -29,14 +34,14 @@ button {
 }
 
 input {
-  color: #4D4D4D;
+  color: $main_text_color;
   font-size: 24px;
   outline: none;
   border: none;
   margin: 15px;
 }
 
-.form-control.more {
+.form-control.more{
   display: inline-block;
   margin: auto;
   background: #F5F5F5;
@@ -48,7 +53,7 @@ footer {
 }
 
 #maincontent {
-  border: solid 1px #ededed;
+  border: $main_border_color;
   background-color: #fff;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
@@ -56,7 +61,7 @@ footer {
 #input-group {
   padding: 10px;
   height: 50px;
-  border-bottom: solid 1px #ededed;
+  border-bottom: $main_border_color;
 }
 
 #allCerect {
@@ -81,14 +86,14 @@ footer {
 #mainlist li {
   font-size: 24px;
   list-style: none;
-  border-bottom: solid 1px #ededed;
+  border-bottom: $main_border_color;
 }
 
 .checkbtn {
   margin-left: 10px;
   width: 40px;
   height: 40px;
-  border: solid 1px #ededed;
+  border: $main_border_color;
   border-radius: 50%;
   margin-top: 10px;
 }
@@ -114,6 +119,7 @@ li:hover .deletebtn {
   position: absolute;
   margin: 15px 0px  0px 10px;
   display: inline-block;
+
 }
 
 li.checked .task {
@@ -144,6 +150,7 @@ li.checked .task {
 #subcontent li {
   list-style: none;
   display: inline-block;
+  //padding: 10px;
 }
 
 .selectgroup {
@@ -154,24 +161,25 @@ li.checked .task {
 .selectgroup a {
   text-decoration: none;
   text-align: center;
-  color: #777;
+  color: $sub_text_color;
   margin: 0px 5px;
+
 }
 
 .count {
   display: inline-block;
-  color: #777;
+  color: $sub_text_color;
   margin: 10px 10px 10px 15px;
 }
 
 .clearComp {
   margin: 15px 10px 10px 10px;
-  color: #777;
+  color: $sub_text_color;
   float: right;
 }
 
 .clearComp:hover {
-  border-bottom: #777 1px solid;
+  border-bottom: $sub_text_color 1px solid;
 }
 
 .copyright {
